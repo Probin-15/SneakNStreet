@@ -161,7 +161,12 @@ body{
 #Hero h1{
     color:white;
 }
-
+#Hero h3{
+    color:white;
+}
+#Hero h5{
+    color:white;
+}
 #Hero button{
     background-color:black;
     color: white;
