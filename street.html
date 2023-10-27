@@ -1,0 +1,438 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ">
+    <title>SneakNStreet</title>
+    <link rel="stylesheet" href="https://fontawesome.com/css/all.css">
+    <script src="https://kit.fontawesome.com/4dcac309fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"> <img src="img\logo\logo1.jpg" class="logo1" alt=""> </a>
+        <div>
+            <ul id="navbar">
+            
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Sneakers</a></li>
+                <li><a class="active" href="street.html">StreetWear</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times-circle"></i></a>
+
+            </ul>
+        </div>
+
+
+    </section>
+
+    <section id="page-header">
+
+        <h2>#STREET CULTURE</h2>
+        <p>Save more with coupons & up to 45% off!!!</p>
+
+
+    </section>
+
+
+
+    <section id="Product1" class="section-p1">
+
+        <script>
+            function addToCart(companyName, sneakerName, price, imagePath) {
+                var product = {
+                    companyName: companyName,
+                    sneakerName: sneakerName,
+                    price: price,
+                    imagePath: imagePath
+                };
+
+                if (typeof (Storage) !== "undefined") {
+                    var cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+                    cart.push(product);
+
+                    sessionStorage.setItem("cart", JSON.stringify(cart));
+                } else {
+                    alert("Session storage is not supported in this browser.");
+                }
+            }
+        </script>
+
+
+        <div class="pro-conatiner">
+            <div class="pro"  onclick="redirectToDetails(5)">
+                <img src="img/clothes_StreetWear/marvel kang conqueror.webp" alt="">
+                <div class="des">
+                    <span>SneakNStreet</span>
+                    <h5>Marvel Kang Conqueror</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹4,999</h4>
+                </div>
+                <a href="#"
+                    onclick="addToCart('SneakNStreet', 'Marvel Kang Conqueror', 4999, 'img\\clothes_StreetWear\\marvel kang conqueror.webp')"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="pro"  onclick="redirectToDetails(6)">
+                <img src="img/clothes_StreetWear/naruto anbu black ops.webp" alt="">
+                <div class="des">
+                    <span>SneakNStreet</span>
+                    <h5>Naruto Anbu BLack OPS</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹6,999</h4>
+                </div>
+                <a href="#"
+                    onclick="addToCart('SneakNStreet', 'Naruto Anbu BLack OPS', 6999, 'img\\clothes_StreetWear\\naruto anbu black ops.webp')"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="pro"  onclick="redirectToDetails(7)">
+                <img src="img/clothes_StreetWear/superman man of steel.webp" alt="">
+                <div class="des">
+                    <span>SneakNStreet</span>
+                    <h5>Superman Steel TEE</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹5,500</h4>
+                </div>
+                <a href="#"
+                    onclick="addToCart('SneakNStreet', 'Superman Steel TEE', 5500, 'img\\clothes_StreetWear\\superman man of steel.webp')"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="pro"  onclick="redirectToDetails(8)">
+                <img src="img/clothes_StreetWear/truck art black panther.webp" alt="">
+                <div class="des">
+                    <span>SneakNStreet</span>
+                    <h5>Truck ART TEE</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>₹7,999</h4>
+                </div>
+                <a href="#"
+                    onclick="addToCart('SneakNStreet', 'Truck ART TEE', 7999, 'img\\clothes_StreetWear\\truck art black panther.webp')"><i
+                        class="fa-solid fa-cart-shopping"></i></a>
+
+            </div>
+            <div class="pro-conatiner">
+                <div class="pro">
+                    <img src="img/clothes_StreetWear/tss orginals astro rock.webp" alt="">
+                    <div class="des">
+                        <span>SneakNStreet</span>
+                        <h5>TSS Orginals Astro Rock</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹2,000</h4>
+                    </div>
+                    <a href="#"
+                        onclick="addToCart('SneakNStreet', 'TSS Orginals Astro Rock', 2000, 'img\\clothes_StreetWear\\tss orginals astro rock.webp')"><i
+                            class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+                <div class="pro">
+                    <img src="img/clothes_StreetWear/1689146727_9176028.webp" alt="">
+                    <div class="des">
+                        <span>SneakNStreet</span>
+                        <h5>TMNT: Oversized Seavy Tee</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹2,999</h4>
+                    </div>
+                    <a href="#"
+                        onclick="addToCart('SneakNStreet', 'TMNT: Oversized Seavy Tee', 2999, 'img\\clothes_StreetWear\\1689146727_9176028.webp')"><i
+                            class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+                <div class="pro">
+                    <img src="img/clothes_StreetWear/1692687293_2901780.webp" alt="">
+                    <div class="des">
+                        <span>SneakNStreet</span>
+                        <h5>TMNT: Oversized OLive Tee</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹3,900</h4>
+                    </div>
+                    <a href="#"
+                        onclick="addToCart('SneakNStreet', 'TMNT: Oversized OLive Tee', 3900, 'img\\clothes_StreetWear\\1692687293_2901780.webp')"><i
+                            class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+                <div class="pro">
+                    <img src="img/clothes_StreetWear/1692706264_2069486.webp" alt="">
+                    <div class="des">
+                        <span>SneakNStreet</span>
+                        <h5>TealMatt TEE</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹3,999<h4>
+                    </div>
+                    <a href="#"
+                        onclick="addToCart('SneakNStreet', 'TealMatt TEE', 3999, 'img\\clothes_StreetWear\\1692706264_2069486.webp')"><i
+                            class="fa-solid fa-cart-shopping"></i></a>
+
+                </div>
+                <div class="pro-conatiner">
+                    <div class="pro">
+                        <img src="img/clothes_StreetWear/black panther tribal pattern set.webp" alt="">
+                        <div class="des">
+                            <span>SneakNStreet</span>
+                            <h5>Black Panther Tribal Pattern Set</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹4,999</h4>
+                        </div>
+                        <a href="#"
+                            onclick="addToCart('SneakNStreet', 'Black Panther Tribal Pattern Set', 4999, 'img\\clothes_StreetWear\\black panther tribal pattern set.webp')"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+
+                    </div>
+                    <div class="pro">
+                        <img src="img/clothes_StreetWear/black panther wakanda forever.webp" alt="">
+                        <div class="des">
+                            <span>SneakNStreet</span>
+                            <h5>Black Panther Wakanda Forever</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹5,999</h4>
+                        </div>
+                        <a href="#"
+                            onclick="addToCart('SneakNStreet', 'Black Panther Wakanda Forever', 5999, 'img\\clothes_StreetWear\\black panther wakanda forever.webp')"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+
+                    </div>
+                    <div class="pro">
+                        <img src="img/clothes_StreetWear/design6.webp" alt="">
+                        <div class="des">
+                            <span>SneakNStreet</span>
+                            <h5>TMNT: Oversized Aquatic Tee</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹2,900</h4>
+                        </div>
+                        <a href="#"
+                            onclick="addToCart('SneakNStreet', 'TMNT: Oversized Aquatic Tee', 2900, 'img\\clothes_StreetWear\\design6.webp')"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+
+                    </div>
+                    <div class="pro">
+                        <img src="img/clothes_StreetWear/gotg stay weird.webp" alt="">
+                        <div class="des">
+                            <span>SneakNStreet</span>
+                            <h5>GotG Stay Weird</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹4,000</h4>
+                        </div>
+                        <a href="#"
+                            onclick="addToCart('SneakNStreet', 'GotG Stay Weird', 4000, 'img\\clothes_StreetWear\\gotg stay weird.webp')"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="pro-conatiner">
+                        <div class="pro">
+                            <img src="img/clothes_StreetWear/naruto uchiha 23.webp" alt="">
+                            <div class="des">
+                                <span>SneakNStreet</span>
+                                <h5>Naruto Uchiha</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹2,500</h4>
+                            </div>
+                            <a href="#"
+                                onclick="addToCart('SneakNStreet', 'Naruto Uchiha', 2500, 'img\\clothes_StreetWear\\naruto uchiha 23.webp')"><i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="img/clothes_StreetWear/Naruto Hokage.webp" alt="">
+                            <div class="des">
+                                <span>SneakNStreet</span>
+                                <h5>Naruto Hokage</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹1,999</h4>
+                            </div>
+                            <a href="#"
+                                onclick="addToCart('SneakNStreet', 'Naruto Hokage', 1999, 'img\\clothes_StreetWear\\Naruto Hokage.webp')"><i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+
+                        </div>
+                        <div class="pro">
+                            <img src="img/clothes_StreetWear/Naruto Uchiha Set.webp" alt="">
+                            <div class="des">
+                                <span>SneakNStreet</span>
+                                <h5> Naruto Uchiha Set</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹3,500</h4>
+                            </div>
+                            <a href="#"
+                                onclick="addToCart('SneakNStreet', 'Naruto Uchiha Set', 3500, 'img\\clothes_StreetWear\\Naruto Uchiha Set.webp')"><i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+
+                        </div>
+                        <div class="pro">
+                            <img src="img/clothes_StreetWear/Naruto Uzumaki Set.webp" alt="">
+                            <div class="des">
+                                <span>SneakNStreet</span>
+                                <h5>Naruto Uzumaki Set.</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹3,600</h4>
+                            </div>
+                            <a href="#"
+                                onclick="addToCart('SneakNStreet', 'Naruto Uzumaki Set', 3600, 'img\\clothes_StreetWear\\Naruto Uzumaki Set.webp')"><i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+
+                        </div>
+
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img\logo\logo1.jpg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Charusat University, Changa</p>
+            <p><strong>Phone:</strong> 123456789</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a><br>
+            <a href="#">Dilivery Information</a><br>
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Terms and Conditions</a><br>
+            <a href="#">Contact Us</a><br>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a><br>
+            <a href="#">View cart</a><br>
+            <a href="#">My Wishlist</a><br>
+            <a href="#">Track My Order</a><br>
+            <a href="#">Help</a><br>
+        </div>
+        <div class="col install">
+            <h4>Install Apps</h4>
+            <p>Secured Payement Gateways</p>
+            <img src="img\payment.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>@ 2023, SGP etc - HTML CSS E-Commerce Tempelate</p>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+    <script>
+        function redirectToDetails(productId) {
+        // Redirect to the sproduct page with the product ID
+        window.location.href = `streetp.html?id=${productId}`;
+    }
+    </script>
+</body>
+
+</html>

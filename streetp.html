@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Wear Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Street Wear Details</h1>
+    <div class="product-details" id="product-details">
+        
+        </select>
+        
+        
+    </div>
+
+      <script>    
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'));
+    
+    // Show the product details for the selected product
+
+        // Define your product details as an object
+        const productDetails = {
+           
+          
+            5: {
+                name: 'Marvel Kang Conqueror',
+                price: '₹4,999',
+                description: 'A Marvel Kang the Conqueror tee is a T-shirt featuring imagery or branding related to the character Kang the Conqueror from the Marvel Comics universe.',
+                image: 'marvel kang conqueror.webp',
+            },
+            6: {
+                name: 'Naruto Anbu BLack OPS',
+                price: '₹6,999',
+                description: 'The Naruto Anbu Black Ops tee is a piece of clothing inspired by the popular manga and anime series "Naruto."',
+                image: 'naruto anbu black ops.webp',
+            },
+            7: {
+                name: 'Superman Steel TEE',
+                price: '₹5,500',
+                description: 'The "Superman Steel Tee" is a T-shirt featuring a design related to the Superman comic book character',
+                image: 'superman man of steel.webp',
+            },
+            8: {
+                name: 'Truck ART TEE',
+                price: '₹7,999',
+                description: 'The "Truck Art Tee" is a t-shirt featuring a design inspired by the vibrant and colorful truck art often seen on trucks and vehicles in South Asia',
+                image: 'truck art black panther.webp',
+            },
+          
+            // Add more products as needed
+        };
+        
+        const imagepath="img/clothes_StreetWear/";
+
+        // Get the product details container on the details page
+        const detailsContainer = document.getElementById('product-details');
+
+        // Get the product details for the selected productId
+        const selectedProduct = productDetails[productId];
+
+        if (selectedProduct) {
+            const imageUrl=imagepath+selectedProduct.image;
+            // Create HTML content for the product details
+
+            const detailsHTML = `
+                <img src="${imageUrl}" alt="${selectedProduct.name}">
+                <h2>${selectedProduct.name}</h2>
+                <p>Price: ${selectedProduct.price}</p>
+                <p>Description: ${selectedProduct.description}</p>
+            `;
+
+            // Set the innerHTML of the details container with the detailsHTML
+            detailsContainer.innerHTML = detailsHTML;
+
+            // Show the details container
+            detailsContainer.style.display = 'block';
+        }
+      </script>
+</body>
+</html>

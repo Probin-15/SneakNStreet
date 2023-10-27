@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sneaker Details</h1>
+    <div class="product-details" id="product-details">
+        
+        </select>
+        
+        
+    </div>
+
+      <script>    
+    // Get the product ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id'));
+    
+    // Show the product details for the selected product
+
+        // Define your product details as an object
+        const productDetails = {
+            1: {
+                name: 'Air Jordan Retro High 1',
+                price: '₹15,000',
+                description: ' It is a high-top silhouette with a mix of leather and suede materials, a prominent Nike Swoosh logo, and the classic Air Jordan wings logo on the ankle.',
+                image:'wmns-air-jordan-1-retro-hi-og-varsity-maizegame-royal-sail-63bd591670553.jpg',
+                
+            },
+            2: {
+                name: 'Nike Air Jordan 1',
+                price: '₹17,000',
+                description: 'It boasts a high-top silhouette, iconic Jordan wings logo, and a bold Nike Swoosh',
+                image: 'air-jordan-1-mid-whitegym-red-black_1-64a7d89496d46.jpg',
+            },
+            3: {
+                name: 'Nike Dunks Green 3',
+                price: '₹14,500',
+                description: ' variation featuring a green colorway within the Nike Dunk series. It is known for its classic design with a leather upper, padded collar, and a distinctive color combination',
+                image: 'nike-dunk-hi-retro-bttys-stadium-greenwhite-stadium-green-white-640b26613bb51.jpg',
+            },
+            4: {
+                name: 'Turquoise Air Jordan 1',
+                price: '₹19,000',
+                description: 'The Turquoise Air Jordan 1 is a variation of the iconic Air Jordan 1 sneaker, featuring a turquoise colorway',
+                image: 'wmns-air-jordan-1-mid-se-bleached-turqsky-j-teal-barely-green-64ae4d129fd86.jpg',
+            },
+           
+          
+            // Add more products as needed
+        };
+        const imagepath='img/shoes_Sneakers/';
+      
+
+        // Get the product details container on the details page
+        const detailsContainer = document.getElementById('product-details');
+
+        // Get the product details for the selected productId
+        const selectedProduct = productDetails[productId];
+
+        if (selectedProduct) {
+            const imageUrl=imagepath+selectedProduct.image;
+            // Create HTML content for the product details
+
+            const detailsHTML = `
+                <img src="${imageUrl}" alt="${selectedProduct.name}">
+                <h2>${selectedProduct.name}</h2>
+                <p>Price: ${selectedProduct.price}</p>
+                <p>Description: ${selectedProduct.description}</p>
+            `;
+
+            // Set the innerHTML of the details container with the detailsHTML
+            detailsContainer.innerHTML = detailsHTML;
+
+            // Show the details container
+            detailsContainer.style.display = 'block';
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ">
+    <title>SneakNStreet</title>
+    <link rel="stylesheet" href="https://fontawesome.com/css/all.css">
+    <script src="https://kit.fontawesome.com/4dcac309fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head> 
+<body>
+        <section id="header">
+            <a href="#"> <img src="img\logo\logo1.jpg" class="logo1" alt=""> </a>
+            <div>
+                <ul id="navbar">    
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Sneakers</a></li>
+                    <li><a href="street.html">StreetWear</a></li> 
+                    <li><a  href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times-circle"></i></a>
+
+                </ul>
+            </div>
+        
+        
+        </section>  
+
+        <section id="page-header" class="about-header">
+            <h2>#let's_talk</h2>
+            <p>LEAVE A MESSAGE, We love to hear from you!</p>
+        </section>
+
+        <section id="cart" class="section-p1">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+            
+                <tbody id="cart-table-body">
+                    <!-- Cart items will be dynamically generated here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>Total:</td>
+                        <td id="total">₹0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <script>
+                function populateCartTable() {
+                    
+                    if (typeof (Storage) !== "undefined") {
+                var cart = JSON.parse(sessionStorage.getItem("cart"));
+
+                var tableBody = document.getElementById("cart-table-body");
+                var totalElement = document.getElementById("total");
+
+                tableBody.innerHTML = "";
+                var total = 0;
+
+                if (cart && cart.length > 0) {
+                    for (var i = 0; i < cart.length; i++) {
+                        var item = cart[i];
+                        var row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td><a href="#" onclick="removeCartItem(${i})"><i class="far fa-times-circle"></i></a></td>
+                            <td><img src="${item.imagePath}" alt=""></td>
+                            <td>${item.sneakerName}</td>
+                            <td>₹${item.price}</td>
+                            <td><input type="number" value="${item.quantity}" id="quantity${i}" onchange="updateSubtotal(${i})"></td>
+                            <td id="subtotal${i}">₹${item.price * item.quantity}</td>
+                        `;
+                        tableBody.appendChild(row);
+                        total += item.price * item.quantity;
+                    }
+                } else {
+                    var emptyCartRow = document.createElement("tr");
+                    emptyCartRow.innerHTML = `
+                        <td colspan="6">Your cart is empty.</td>
+                    `;
+                    tableBody.appendChild(emptyCartRow);
+                }
+
+                totalElement.textContent = `₹${total}`;
+            } else {
+                alert("Session storage is not supported in this browser.");
+            }
+                }
+            
+                function removeCartItem(index) {
+                    var cart = JSON.parse(sessionStorage.getItem("cart"));
+                    if (cart && cart.length > index) {
+                        cart.splice(index, 1);
+                        sessionStorage.setItem("cart", JSON.stringify(cart));
+                    }
+            
+                    populateCartTable();
+                }
+            
+                function updateSubtotal(index) {
+                    var quantityInput = document.getElementById(`quantity${index}`);
+    var subtotalElement = document.getElementById(`subtotal${index}`);
+
+    var cart = JSON.parse(sessionStorage.getItem("cart"));
+    if (cart && cart.length > index) {
+        var item = cart[index];
+
+        // Parse the quantity as an integer
+        var quantity = parseInt(quantityInput.value);
+
+        // Ensure that item.price is a number (use parseFloat)
+        var price = parseFloat(item.price);
+
+        // Check if both quantity and price are valid numbers
+        if ( !isNaN(price)) {
+            var subtotal = price * quantity;
+            subtotalElement.textContent = `₹${subtotal}`;
+
+            item.quantity = quantity;
+            sessionStorage.setItem("cart", JSON.stringify(cart));
+
+            // Update the total sum
+            var totalElement = document.getElementById("total");
+            var total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+            totalElement.textContent = `₹${total}`;
+        }
+    }
+                }
+            
+                window.onload = populateCartTable;
+            </script>
+            
+
+        </section>
+        
+        <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                    <div>
+                        <input type="text" placeholder="Enter your coupon">
+                        <button class="normal"> Apply  </button>
+                    </div>
+            </div>
+
+
+            <div>
+               <br> <button onclick="window.location.href = 'payment.html';">Pay Now</button>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="img\logo\logo1.jpg" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Charusat University, Changa</p>
+                <p><strong>Phone:</strong> 123456789</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+             </div>
+             <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a><br>
+                <a href="#">Dilivery Information</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms and Conditions</a><br>
+                <a href="#">Contact Us</a><br>
+             </div>
+             <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a><br>
+                <a href="#">View cart</a><br>
+                <a href="#">My Wishlist</a><br>
+                <a href="#">Track My Order</a><br>
+                <a href="#">Help</a><br>
+             </div>
+             <div class="col install">
+                <h4>Install Apps</h4>
+                <p>Secured Payement Gateways</p>
+                <img src="img\payment.png" alt="">
+             </div>
+             <div class="copyright">
+                <p>@ 2023, SGP etc - HTML CSS E-Commerce Tempelate</p>
+             </div>
+        </footer>
+
+    <script src="script.js">
+
+            </script>
+</body>
+
+</html>

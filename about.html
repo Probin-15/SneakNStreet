@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ">
+    <title>SneakNStreet</title>
+    <link rel="stylesheet" href="https://fontawesome.com/css/all.css">
+    <script src="https://kit.fontawesome.com/4dcac309fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head> 
+<body>
+        <section id="header">
+            <a href="#"> <img src="img\logo\logo1.jpg" class="logo1" alt=""> </a>
+            <div>
+                <ul id="navbar">    
+                   
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Sneakers</a></li>
+                    <li><a href="street.html">StreetWear</a></li> 
+                    <li><a class="active" href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times-circle"></i></a>
+
+                </ul>
+            </div>
+       
+        
+        </section>  
+
+        <section id="page-header" class="about-header">
+            <h2>#Know Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur</p>
+        </section>
+
+        <section id="about-head" class="section-p1">
+            <img src="img\banner\adidas-banner-cooljs.webp" alt="">
+            <div>
+                
+                <h2>Welcome to SneakNStreet, India's premier GenZ streetwear supplier!</h2><br><br>
+
+            
+                <h4> Our team is made up of passionate fashion enthusiasts with a love for all things modern and streetwear. 
+                    Our mission is to provide our customers with high-quality, unique and stylish modern streetwear at an affordable price,
+                    especially during these times of high inflation.</h4><br>
+
+                    <h4> SneakNStreet was founded in January 2023 in Gujarat, India by Japan Kachhiya  , Shivaansh Dave , Probin Bhagchandani. 
+                        As entrepreneurs at heart, they combined their interests in photography, art, music, and modern clothing to create something
+                         truly special.We have searched the world to bring you the best of the best in modern streetwear, 
+                         carefully selecting pieces from all your favorite brands.</h4><br>
+
+                        <h4> At SneakNStreet, we're more than just a store - we're a community of modern streetwear enthusiasts. 
+                            We regularly host in-store events and collaborations with local artists and designers, so be sure to check out 
+                            for the latest updates.</h4><br>
+
+                            <h4> We look forward to helping you find your next favorite piece, whether in-store or online. 
+                                Join our community of modern streetwear enthusiasts and discover the unique style and aesthetic of SneakNStreet, 
+                                where the past and the present merge to create something truly special.  
+                            </h4>
+                <br>
+            </div>
+        </section>
+
+      
+
+        <section id="Feature" class="section-p1">
+            <div class="fe-box">
+                <img src="img/features/free-shipping.jpg" alt="">
+                <h5>Free Shipping</h5>
+            </div>
+
+            <div class="fe-box">
+                <img src="img/features/customer.jpg" alt="">
+                <h5>24/7 Customer Support</h5>
+            </div>
+
+            <div class="fe-box">
+                <img src="img/features/discount.jpg" alt="">
+                <h5>Amazing Discounts</h5>
+            </div>
+
+            <div class="fe-box">
+                <img src="img/features/return policy.jpg" alt="">
+                <h5>10-Days Return Policy</h5>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section-p1 section-m1">
+            <div class="newstext">
+                <h4>Sign Up for Newsletters</h4>
+                <p>Get E-Mail updates about our latest shop and <span>special offers </span></p>
+            </div>
+
+            <div class="form">
+                <input type="text" placeholder="Your Email Address">
+                <button class="normal">Sign Up</button>
+                
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="D:\SGP\img\logo\logo1.jpg" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Charusat University, Changa</p>
+                <p><strong>Telephone:</strong> 02697-265021</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+             </div>
+             <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a><br>
+                <a href="#">Dilivery Information</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms and Conditions</a><br>
+                <a href="#">Contact Us</a><br>
+             </div>
+             <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a><br>
+                <a href="#">View cart</a><br>
+                <a href="#">My Wishlist</a><br>
+                <a href="#">Track My Order</a><br>
+                <a href="#">Help</a><br>
+             </div>
+             <div class="col install">
+              
+                <p>Secured Payement Gateways</p>
+                <img src="D:\SGP\img\payment.png" alt="">
+             </div>
+             <div class="copyright">
+                <p>@ 2023, SGP etc - HTML CSS E-Commerce Tempelate</p>
+             </div>
+        </footer>
+
+
+       <script>
+        var MainImg =  document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("smallimg");
+        smallimg[0].onclick = function(){
+              MainImg.src=smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+              MainImg.src=smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+              MainImg.src=smallimg[2].src;
+        }
+        smallimg[3].onclick = function(){
+              MainImg.src=smallimg[3].src;
+        }
+        
+
+       </script>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ">
+    <title>SneakNStreet</title>
+    <link rel="stylesheet" href="https://fontawesome.com/css/all.css">
+    <script src="https://kit.fontawesome.com/4dcac309fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head> 
+<body>
+        <section id="header">
+            <a href="#"> <img src="img\logo\logo1.jpg" class="logo1" alt=""> </a>
+            <div>
+                <ul id="navbar">    
+
+                    <li><a href="index.html">Home</a></li>    
+                    <li><a class="active" href="shop.html">Sneakers</a></li>
+                    <li><a href="street.html">StreetWear</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times-circle"></i></a>
+
+                </ul>
+            </div>
+           
+        
+        </section>   
+
+        <section id="page-header">
+           
+            <h2>#StayStylish</h2>
+            <p>Save more with coupons & up to 65% off!!!</p>
+        
+        
+        </section>
+
+       
+
+        <section id="Product1" class="section-p1">
+         
+        <script>
+            function addToCart(companyName, sneakerName, price, imagePath) {
+                var product = {
+                    companyName: companyName,
+                    sneakerName: sneakerName,
+                    price: price,
+                    imagePath: imagePath
+                };
+
+                if (typeof(Storage) !== "undefined") {
+                    var cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+
+                    cart.push(product);
+
+                    sessionStorage.setItem("cart", JSON.stringify(cart));
+                } else {
+                    alert("Session storage is not supported in this browser.");
+                }
+            }
+        </script>
+            
+            <div class="pro-conatiner">
+                <div class="pro"  onclick="redirectToDetails(1)">
+                    <img src="img\shoes_Sneakers\wmns-air-jordan-1-retro-hi-og-varsity-maizegame-royal-sail-63bd591670553.jpg" alt="">
+                    <div class="des">
+                        <span>Nike</span>
+                        <h5> Air Jordan 1 Retro</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹15,000</h4>
+                    </div>
+                    <a href="#" onclick="addToCart('Nike', 'Air Jordan 1 Retro', 15000, 'img\\shoes_Sneakers\\wmns-air-jordan-1-retro-hi-og-varsity-maizegame-royal-sail-63bd591670553.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                    <div class="pro"  onclick="redirectToDetails(2)">
+                        <img src="img\shoes_Sneakers\air-jordan-1-mid-whitegym-red-black_1-64a7d89496d46.jpg" alt="">
+                        <div class="des">
+                            <span>Nike</span>
+                            <h5>Nike Air Jordan 1</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹17,000</h4>
+                        </div>
+                        <a href="#" onclick="addToCart('Nike', 'Nike Air Jordan 1', 17000, 'img\\shoes_Sneakers\\air-jordan-1-mid-whitegym-red-black_1-64a7d89496d46.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div> <div class="pro"  onclick="redirectToDetails(3)">
+                    <img src="img\shoes_Sneakers\nike-dunk-hi-retro-bttys-stadium-greenwhite-stadium-green-white-640b26613bb51.jpg" alt="">
+                    <div class="des">
+                        <span>Nike</span>
+                        <h5>Nike Dunks Green 3</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹14,500</h4>
+                    </div>
+                    <a href="#" onclick="addToCart('Nike', 'Nike Dunks Green 3', 14500, 'img\\shoes_Sneakers\\nike-dunk-hi-retro-bttys-stadium-greenwhite-stadium-green-white-640b26613bb51.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div> <div class="pro"  onclick="redirectToDetails(4)">
+                    <img src="img\shoes_Sneakers\wmns-air-jordan-1-mid-se-bleached-turqsky-j-teal-barely-green-64ae4d129fd86.jpg" alt="">
+                    <div class="des">
+                        <span>Nike</span>
+                        <h5>Turquoise Air Jordan 1</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>₹19,000</h4>
+                    </div>
+                    <a href="#" onclick="addToCart('Nike', 'Turquoise Air Jordan 1', 19000, 'img\\shoes_Sneakers\\wmns-air-jordan-1-mid-se-bleached-turqsky-j-teal-barely-green-64ae4d129fd86.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div> 
+
+
+
+
+                <div class="pro-conatiner">
+                    <div class="pro">
+                        <img src="img\shoes_Sneakers\ja-1-ep-ember-glowblack-light-silver-64a7c109829f1.jpg" alt="">
+                        <div class="des">
+                            <span>Nike</span>
+                            <h5> Glowback Silver Jordan</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹22,000</h4>
+                        </div>
+                        <a href="#" onclick="addToCart('Nike', 'Glowback Silver Jordan', 22000, 'img\\shoes_Sneakers\\ja-1-ep-ember-glowblack-light-silver-64a7c109829f1.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="pro">
+                        <img src="img\shoes_Sneakers\air-force-1-low-retro-safety-orangesummit-white-safety-orange-63fddb18007f1.jpg" alt="">
+                        <div class="des">
+                            <span>Nike</span>
+                            <h5>Air Force 1 Low Retro Orange</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹19,999</h4>
+                        </div>
+                        <a href="#" onclick="addToCart('Nike', 'Air Force 1 Low Retro Orange', 19999, 'img\\shoes_Sneakers\\air-force-1-low-retro-safety-orangesummit-white-safety-orange-63fddb18007f1.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div> <div class="pro">
+                        <img src="img\shoes_Sneakers\air-force-1-low-retro-university-bluewhite-metallic-gold-6360b0c43ea78.jpg" alt="">
+                        <div class="des">
+                            <span>Nike</span>
+                            <h5>Air Force 1 Low Retro BlueWhite</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹29,900</h4>
+                        </div>
+                        <a href="#" onclick="addToCart('Nike', 'Air Force 1 Low Retro BlueWhite', 29900, 'img\\shoes_Sneakers\\air-force-1-low-retro-university-bluewhite-metallic-gold-6360b0c43ea78.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div> <div class="pro">
+                        <img src="img\shoes_Sneakers\ajko-1-blackfield-purple-white-64b7ac027441c.jpg" alt="">
+                        <div class="des">
+                            <span>Nike</span>
+                            <h5>Jordan 1 Purple Field</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹39,999<h4>
+                        </div>
+                        <a href="#" onclick="addToCart('Nike', 'Jordan 1 Purple Field', 39999, 'img\\shoes_Sneakers\\ajko-1-blackfield-purple-white-64b7ac027441c.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div> 
+
+
+
+
+
+                    <div class="pro-conatiner">
+                        <div class="pro">
+                            <img src="img\shoes_Sneakers\wmns-nike-air-force-1-lo-07-summit-whiteblack-bright-mandarin-63ea2b334be83.jpg" alt="">
+                            <div class="des">
+                                <span>Nike</span>
+                                <h5>Force 1 Bright Mandarins </h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹23,999</h4>
+                            </div>
+                            <a href="#" onclick="addToCart('Nike', 'Force 1 Bright Mandarins', 23999, 'img\\shoes_Sneakers\\wmns-nike-air-force-1-lo-07-summit-whiteblack-bright-mandarin-63ea2b334be83.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="img\shoes_Sneakers\w-nike-cortez-sailgorge-green-malachite-coconut-milk-643229f7e924f.jpg" alt="">
+                            <div class="des">
+                                <span>Nike</span>
+                                <h5>Green Malachite Cortez</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹27,000</h4>
+                            </div>
+                            <a href="#" onclick="addToCart('Nike', 'Green Malachite Cortez', 27000, 'img\\shoes_Sneakers\\w-nike-cortez-sailgorge-green-malachite-coconut-milk-643229f7e924f.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div> <div class="pro">
+                            <img src="img\shoes_Sneakers\wmns-air-force-1-07-sailmedium-blue-pale-vanilla-641d8453996f6.jpg" alt="">
+                            <div class="des">
+                                <span>Nike</span>
+                                <h5>Force 1 Blue Sails</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹34,900</h4>
+                            </div>
+                            <a href="#"  onclick="addToCart('Nike', 'Force 1 Blue Sails', 34900, 'img\\shoes_Sneakers\\wmns-air-force-1-07-sailmedium-blue-pale-vanilla-641d8453996f6.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div> <div class="pro">
+                            <img src="img\shoes_Sneakers\forum-low-cl-core-whitepurple-rushmagic-lilac-63caa2544fa6f.jpg" alt="">
+                            <div class="des">
+                                <span>Adidas</span>
+                                <h5>Rush Magic Lilac</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>₹16,000</h4>
+                            </div>
+                            <a href="#"  onclick="addToCart('Adidas', 'Rush Magic Lilac', 16000, 'img\\shoes_Sneakers\\forum-low-cl-core-whitepurple-rushmagic-lilac-63caa2544fa6f.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div> 
+
+
+
+
+
+                        <div class="pro-conatiner">
+                            <div class="pro">
+                                <img src="img\shoes_Sneakers\nike-terminator-low-og-university-goldnavy-white-6405877a74326.jpg" alt="">
+                                <div class="des">
+                                    <span>Nike</span>
+                                    <h5> Terminator Low OG's</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>₹30,000</h4>
+                                </div>
+                                <a href="#"  onclick="addToCart('Nike', 'Terminator Low OG\'s', 30000, 'img\\shoes_Sneakers\\nike-terminator-low-og-university-goldnavy-white-6405877a74326.jpg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                            <div class="pro">
+                                <img src="img\shoes_Sneakers\custom-nike-air-force-1-high-by-you-shoes.jpeg" alt="">
+                                <div class="des">
+                                    <span>Nike</span>
+                                    <h5>Nike Air Force 1 High</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>₹27,000</h4>
+                                </div>
+                                <a href="#"  onclick="addToCart('Nike', 'Nike Air Force 1 High', 27000, 'img\\shoes_Sneakers\\custom-nike-air-force-1-high-by-you-shoes.jpeg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div> <div class="pro">
+                                <img src="img\shoes_Sneakers\0e5f264a-e251-4bfe-ba8e-8dbec256f917.jpeg" alt="">
+                                <div class="des">
+                                    <span>Nike</span>
+                                    <h5>Nike Air Force 1 High Oranges</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>₹34,500</h4>
+                                </div>
+                                <a href="#"  onclick="addToCart('Nike', 'Nike Air Force 1 High Oranges', 34500, 'img\\shoes_Sneakers\\0e5f264a-e251-4bfe-ba8e-8dbec256f917.jpeg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div> <div class="pro">
+                                <img src="img\shoes_Sneakers\b7b14b16-85c3-41e8-adb2-94882720f7d9.jpeg" alt="">
+                                <div class="des">
+                                    <span>Nike</span>
+                                    <h5>Force 1 High Red Rages</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>₹39,999</h4>
+                                </div>
+                                <a href="#"  onclick="addToCart('Nike', 'Force 1 High Red Rages', 39999, 'img\\shoes_Sneakers\\b7b14b16-85c3-41e8-adb2-94882720f7d9.jpeg')"><i class="fa-solid fa-cart-shopping"></i></a>
+                            </div> 
+
+        </section>
+
+        <footer class="section-p1">
+            <div class="col">
+                <img class="logo" src="img\logo\logo1.jpg" alt="">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Charusat University, Changa</p>
+                <p><strong>Phone:</strong> 123456789</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+             </div>
+             <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a><br>
+                <a href="#">Dilivery Information</a><br>
+                <a href="#">Privacy Policy</a><br>
+                <a href="#">Terms and Conditions</a><br>
+                <a href="#">Contact Us</a><br>
+             </div>
+             <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a><br>
+                <a href="#">View cart</a><br>
+                <a href="#">My Wishlist</a><br>
+                <a href="#">Track My Order</a><br>
+                <a href="#">Help</a><br>
+             </div>
+             <div class="col install">
+                <h4>Install Apps</h4>
+                <p>Secured Payement Gateways</p>
+                <img src="img\payment.png" alt="">
+             </div>
+             <div class="copyright">
+                <p>@ 2023, SGP etc - HTML CSS E-Commerce Tempelate</p>
+             </div>
+        </footer>
+
+    <script src="script.js"> </script>
+    <script>
+        function redirectToDetails(productId) {
+        // Redirect to the sproduct page with the product ID
+        window.location.href = `sproduct.html?id=${productId}`;
+    }
+    </script>
+</body>
+
+</html>
