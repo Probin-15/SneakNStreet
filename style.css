@@ -563,3 +563,10 @@ h1 {
 .product-details {
     display: none;
 }
+
+a:link{
+    color: blue;
+}
+a:link, a:visited {
+    color: blue;
+  }
