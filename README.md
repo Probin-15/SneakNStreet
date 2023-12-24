@@ -1,4 +1,4 @@
-# SneaknStreet
+# SneakNStreet
 Frontend E-Commerce Website
 
 SneakNStreet is an E-Commerce Website that sells trendy sneakers and fashionable streetwear clothing, 
