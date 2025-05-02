@@ -54,9 +54,9 @@ Because fashion isn’t just what you wear — it’s about **expressing who you
 Let’s make bold fashion statements together. **#SneakNStreet #BeBoldBeYou** 💥
 
 ![image alt](https://github.com/Probin-15/SneakNStreet/blob/8bd3ee5f8032dab65405b25418001919b805a8a3/screenshots/Picture1.png)
-![image alt](https://github.com/Probin-15/SneakNStreet/blob/d6be944b41172f0fada7ecf26204c0c825c26c82/screenshots/Picture2.png)
+![image alt](https://github.com/Probin-15/SneakNStreet/blob/344204f1558132803281c7e3820e75dfa7551465/Picture2.png)
 ![image alt](https://github.com/Probin-15/SneakNStreet/blob/8bd3ee5f8032dab65405b25418001919b805a8a3/screenshots/Picture3.png)
 ![image alt](https://github.com/Probin-15/SneakNStreet/blob/8bd3ee5f8032dab65405b25418001919b805a8a3/screenshots/Picture4.png)
 ![image alt](https://github.com/Probin-15/SneakNStreet/blob/8bd3ee5f8032dab65405b25418001919b805a8a3/screenshots/Picture5.png)
-![image alt](https://github.com/Probin-15/SneakNStreet/blob/d6be944b41172f0fada7ecf26204c0c825c26c82/screenshots/Picture6.png)
+![image alt](https://github.com/Probin-15/SneakNStreet/blob/344204f1558132803281c7e3820e75dfa7551465/Picture6.png)
 ![image alt](https://github.com/Probin-15/SneakNStreet/blob/8bd3ee5f8032dab65405b25418001919b805a8a3/screenshots/Picture7.png)
